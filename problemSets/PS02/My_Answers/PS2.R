@@ -59,9 +59,37 @@ df
 # police or not is independent from the class of driver.
 
 
+## p-value????? 
+
 
 # Part c: 
 
+
+Res_Upper_NS <- (13.5-14)^2/sqrt(13.5)
+Res_Upper_NS
+
+Res_Upper_BR <- (8.36-6)^2/sqrt(8.36)
+Res_Upper_BR
+
+Res_Upper_SGW <- (5.14-7)^2/sqrt(5.14)
+Res_Upper_SGW
+
+Res_Lower_NS <- (7.5-7)^2/sqrt(7.5)
+Res_Lower_NS
+
+Res_Lower_BR <- (4.64-7)^2/sqrt(4.64)
+Res_Lower_BR
+
+Res_Lower_SGW <- (2.86-1)^2/sqrt(2.86)
+Res_Lower_SGW
+
+
+# standardised residuals for Upper Class Not stopped: 0.068
+# standardised residuals for Upper Class bribe requested: 1.926
+# standardised residuals for Upper Class Stopped/Given warning: 1.526 
+# standardised residuals for Lower Class Not Stopped: 0.091
+# standardised residuals for Lower Class bribe Requested: 2.586
+# standardised residuals for Lower Class Stopped/Given warning: 2.046
 
 # Part d: 
 
@@ -72,7 +100,7 @@ df
 WESTB <- read.csv("https://raw.githubusercontent.com/kosukeimai/qss/master/PREDICTION/women.csv")
 
 # Part a: 
-# Null Hypothesis: There is no correlation between Gender of politicians and 
+# Null Hypothesis: There is no correlation between Gender of GP leaders and 
 # the likelihood of the number of new or repaired drinking water facilities
 # in the villages. 
 
@@ -87,10 +115,10 @@ summary(Reg_Gen_Wat)
 # Part c: 
 # The p-value of the coefficient of female is 0.0413, which is lower than 0.05.
 # Therefore, we can reject the null hypothesis that there is no correlation 
-# between the gender of politicians and the likelihood of the number of new or 
+# between the gender of GP leaders and the likelihood of the number of new or 
 # repaired drinking water facilities in the villages at the 95% level. 
 # The coefficient of female is 7.864, which indicates that when there is a 
-# difference in gender of politicians, we expect to see an average difference
+# difference in gender of GP leaders, we expect to see an average difference
 # by 7.864 in the number of new or repaired drinking water facilities
 # in the villages.
 
