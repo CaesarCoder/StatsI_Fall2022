@@ -65,31 +65,31 @@ df
 # Part c: 
 
 
-Res_Upper_NS <- (13.5-14)^2/sqrt(13.5)
+Res_Upper_NS <- sqrt((13.5-14)^2/13.5)
 Res_Upper_NS
 
-Res_Upper_BR <- (8.36-6)^2/sqrt(8.36)
+Res_Upper_BR <- sqrt((8.36-6)^2/8.36)
 Res_Upper_BR
 
-Res_Upper_SGW <- (5.14-7)^2/sqrt(5.14)
+Res_Upper_SGW <- sqrt((5.14-7)^2/5.14)
 Res_Upper_SGW
 
-Res_Lower_NS <- (7.5-7)^2/sqrt(7.5)
+Res_Lower_NS <- sqrt((7.5-7)^2/7.5)
 Res_Lower_NS
 
-Res_Lower_BR <- (4.64-7)^2/sqrt(4.64)
+Res_Lower_BR <- sqrt((4.64-7)^2/4.64)
 Res_Lower_BR
 
-Res_Lower_SGW <- (2.86-1)^2/sqrt(2.86)
+Res_Lower_SGW <- sqrt((2.86-1)^2/2.86)
 Res_Lower_SGW
 
 
-# standardised residuals for Upper Class Not stopped: 0.068
-# standardised residuals for Upper Class bribe requested: 1.926
-# standardised residuals for Upper Class Stopped/Given warning: 1.526 
-# standardised residuals for Lower Class Not Stopped: 0.091
-# standardised residuals for Lower Class bribe Requested: 2.586
-# standardised residuals for Lower Class Stopped/Given warning: 2.046
+# standardised residuals for Upper Class Not stopped: 0.1361
+# standardised residuals for Upper Class bribe requested: 0.8162
+# standardised residuals for Upper Class Stopped/Given warning: 0.8204
+# standardised residuals for Lower Class Not Stopped: 0.1826
+# standardised residuals for Lower Class bribe Requested: 1.0956
+# standardised residuals for Lower Class Stopped/Given warning: 1.0998
 
 # Part d: 
 
