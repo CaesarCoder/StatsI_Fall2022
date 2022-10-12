@@ -61,7 +61,8 @@ df
 
 
 ## p-value????? 
-
+pchisq(3.80, df =2, lower.tail = FALSE)
+# p = 0.15
 
 # Part c: 
 
@@ -93,6 +94,7 @@ Res_Lower_SGW
 # standardised residuals for Lower Class Stopped/Given warning: -1.0998
 
 # Part d: 
+
 
 
 
