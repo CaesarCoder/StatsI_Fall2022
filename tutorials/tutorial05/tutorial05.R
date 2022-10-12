@@ -5,6 +5,7 @@
 ## Packages
 library(tidyverse) # Load our packages here
 library(broom) # If not installed - function for installing?
+install.packages("broom")
 
 ?tidyverse
 browseVignettes(package = "tidyverse")
@@ -17,6 +18,8 @@ browseVignettes(package = "tidyverse")
 # we can read in a csv file using the read_csv() function, which is 
 # similar to base R's read.csv() function.
 dat <- read.csv("movies.csv")
+dat1 <- read_csv("movies.csv") # gives me more information
+
 
 ##########
 # Exercise
@@ -26,6 +29,8 @@ dat <- read.csv("movies.csv")
 # the output to a different object. What do you notice is different 
 # about the two functions?
 
+class(dat) # dataframe 
+class(dat1) # four responses, tibble is the tidyverse version of dataframe
 vignette("tibble")
 
 #######
@@ -43,10 +48,12 @@ filter(dat, title_type == "Feature Film")
 ## (Selecting or mutating on) columns
 select(dat, thtr_rel_month)
 mutate(dat, rel_mon = month.abb[thtr_rel_month])
+## mutate create a new column
+## transforming month number into English month
 
 ## Group by and summarise into a single row
 by_month <- group_by(dat, thtr_rel_month)
-summarise(by_month, n = n())
+summarise(by_month, n = n()) # summarise the number of observations 
 
 ##########
 # The pipe
@@ -76,9 +83,23 @@ dat %>%
 # column. Which is the most popular month for Horror films to be 
 # released?
 
+dat %>%
+  filter(genre == "Horror") %>% 
+  select(thtr_rel_month) %>%
+  mutate(month = month.abb[thtr_rel_month]) %>% 
+  group_by(month) %>% 
+  summarise(n = n()) %>% 
+  arrange(desc(n)) 
+
 
 # 2. Using the dplyr commands you have learned, find the actor 
 # (actor1) with the most award wins. 
+
+dat %>%
+  filter(best_actor_win == "yes") %>%
+  group_by(actor1) %>% # group data by month
+  summarise(n = n()) %>% # perform a summary operation (count the n per month)
+  arrange(desc(n)) # sort in descending order
 
 
 #######################
@@ -106,6 +127,15 @@ dat %>%
 
 # Using the code above as a template, perform the same operation on 
 # a subset of horror films
+
+dat %>%
+  filter(genre == "Horror")%>%
+  mutate(month = month.abb[thtr_rel_month]) %>% 
+  group_by(month) %>% 
+  summarise(n = n()) %>%
+  mutate(prop_month = round(n / sum(n), 2)) %>% # mutate after our summarise to find the proportion
+  arrange(desc(prop_month))
+
 
 
 #############
@@ -154,4 +184,40 @@ dat %>%
 # Are feature films getting longer? Use the dplyr functions you've 
 # learned about today to find out whether the average running time 
 # of feature films has increased in recent years.
+
+
+
+
+
+# The longest runtime of film from 1996 to 1999
+dat %>%
+  filter(thtr_rel_year > 1996 & thtr_rel_year < 1999) %>%
+  filter(runtime > 120) %>%
+  select(title, runtime, thtr_rel_year) %>%
+  arrange(desc(runtime))
+
+# The best pic win
+dat %>%
+  filter(best_pic_win == "yes") %>%
+  summarise(mean_run_time = mean(runtime)),
+  n = n()
+  sd = sd(runtime)
+ 
+  
+
+dat %>%
+  summarise(mean_run_time, mean(runtime, na.rm = TRUE))
+
+
+# comparing two means, t test, best picture, runtime  
+# 1. two means    overall mean 105.8215,   143.2857
+# 2. sample sizes    full sample 651, and one NA,   7
+# 3. standard deviations   
+
+nrow(is.na(dat$runtime))
+
+# technically, we are testing whether the win pic runtime comes from the same
+# distribution of the overall runtime 
+# difference in mean from a general mean 
+
 
