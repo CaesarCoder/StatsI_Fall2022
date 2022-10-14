@@ -103,8 +103,8 @@ Res_Lower_SGW
 WESTB <- read.csv("https://raw.githubusercontent.com/kosukeimai/qss/master/PREDICTION/women.csv")
 
 # Part a: 
-# Null Hypothesis: There is no correlation between Gender of GP leaders and 
-# the likelihood of the number of new or repaired drinking water facilities
+# Null Hypothesis: There is no correlation between the reservation policy and 
+# the number of new or repaired drinking water facilities
 # in the villages. 
 
 # Part b:
