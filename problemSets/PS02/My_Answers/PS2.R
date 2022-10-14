@@ -109,21 +109,24 @@ WESTB <- read.csv("https://raw.githubusercontent.com/kosukeimai/qss/master/PREDI
 
 # Part b:
 
-Reg_Gen_Wat <- lm(water ~ female, data = WESTB)
+Reg_Gen_Wat <- lm(water ~ reserved, data = WESTB)
 summary(Reg_Gen_Wat)
+
+library(stargazer)
+stargazer(Reg_Gen_Wat, type = "html", out = "Reg_Gen_Wat.html")
 
 ## how to print the report???
 
 
 # Part c: 
-# The p-value of the coefficient of female is 0.0413, which is lower than 0.05.
+# The p-value of the coefficient of female is 0.0197, which is lower than 0.05.
 # Therefore, we can reject the null hypothesis that there is no correlation 
-# between the gender of GP leaders and the likelihood of the number of new or 
+# between the existence of reservation policy and the number of new or 
 # repaired drinking water facilities in the villages at the 95% level. 
-# The coefficient of female is 7.864, which indicates that when there is a 
-# difference in gender of GP leaders, we expect to see an average difference
-# by 7.864 in the number of new or repaired drinking water facilities
-# in the villages.
+# The coefficient of reserved is 9.252, which indicates that when there is a 
+# reservation policy in place, we expect to see an average difference by 9.252 
+# higher in the number of new or repaired drinking water facilities in 
+# the villages.
 
 
 

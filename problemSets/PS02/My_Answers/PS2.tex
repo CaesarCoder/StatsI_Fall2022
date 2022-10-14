@@ -98,16 +98,37 @@
 	\item [(a)]
 	Calculate the $\chi^2$ test statistic by hand/manually (even better if you can do "by hand" in \texttt{R}).\\
 	\vspace{7cm}
-	\lstinputlisting[language=R, firstline=3, lastline=49]{PS2.R}
-	
+	Step 1: Load and Process The Data:\\ 
+	\lstinputlisting[language=R, firstline=3, lastline=8]{PS2.R}
+	Step 2: Calculate the expected frequency of each cell\\
+	\lstinputlisting[language=R, firstline=18, lastline=34]{PS2.R}
+	Expected Frequency Upper Class is not stopped 13.5\\
+	Expected Frequency Upper Class is bribe requested: 8.36\\
+	Expected Frequency Upper Class Stopped/Given warning: 5.14\\
+	Expected Frequency Lower Class Not Stopped: 7.5\\
+	Expected Frequency Lower Class bribe Requested: 4.64 \\
+	Expected Frequency Lower Class Stopped/Given warning: 2.86\\
+	Step 3: Calculate the sum of X-square/Test Statistics
+	\lstinputlisting[language=R, firstline=44, lastline=45]{PS2.R}
+	The sum of X-square/Test Statistics is 3.80.
 	
 	
 	\item [(b)]
 	Now calculate the p-value from the test statistic you just created (in \texttt{R}).\footnote{Remember frequency should be $>$ 5 for all cells, but let's calculate the p-value here anyway.}  What do you conclude if $\alpha = 0.1$?\\
+	Calculate the degree of freedom\\
+	\lstinputlisting[language=R, firstline=48, lastline=49]{PS2.R}
+	The degree of freedom is 2.
+	The Chi square value with degree of freedom 2, alpha = 0.1 is 4.61.	The test statistics 3.8 $<$ 4.61. The obtained chi-square value did not exceed the critical value of 4.61. Therefore, we cannot reject the null hypothesis that soliciting a bribe by police or not is independent from the class of driver.
 	
+	
+	or
+	\lstinputlisting[language=R, firstline=64, lastline=64]{PS2.R}
+	p-value is 0.15, which is larger than 0.1. Therefore, we cannot reject the null hypothesis that soliciting a bribe by police or not is independent from the class of driver.
 	\newpage
 	\item [(c)] Calculate the standardized residuals for each cell and put them in the table below.
 	\vspace{1cm}
+	\lstinputlisting[language=R, firstline=70, lastline=86]{PS2.R}
+	
 	
 	\begin{table}[h]
 		\centering
@@ -115,16 +136,18 @@
 			& Not Stopped & Bribe requested & Stopped/given warning \\
 			\\[-1.8ex] 
 			\hline \\[-1.8ex]
-			Upper class  &  &  &  \\
+			Upper class  & 0.1361 & -0.8162 & 0.8204 \\
 			\\
-			Lower class &  &   &   \\
+			Lower class & -0.1826 & 1.0956  & -1.0998  \\
 			
 		\end{tabular}
 	\end{table}
 	
 	
 	\vspace{7cm}
-	\item [(d)] How might the standardized residuals help you interpret the results?  
+	\item [(d)] How might the standardized residuals help you interpret the results?  \\
+	 The absolute values of standard residuals in all cells are smaller than 2, we can therefore informally conclude that we cannot reject the null hypothesis that the two variables, drivers' class and police's bribing behaviour, are independent. In the cells of upper class not stopped and lower class not stopped, the absolute values of standard residuals are closer to 0, which indicate there is a stronger evidence that the drivers' class and they are not stopped by police are independent from each other. 
+	
 	
 \end{enumerate}
 \newpage
@@ -139,18 +162,25 @@ Chattopadhyay and Duflo were interested in whether women promote different polic
 	\vspace{.5cm}
 	\centering
 	\label{fig:women_desc}
-	\includegraphics[width=1.1\textwidth]{../../../../graphics/women_desc.png}
+	\includegraphics[width=1.1\textwidth]{women_desc.png}
 \end{figure}		
 
 \newpage
 \begin{enumerate}
-	\item [(a)] State a null and alternative (two-tailed) hypothesis. 
-	
+	\item [(a)] State a null and alternative (two-tailed) hypothesis. \\
+	Null Hypothesis: There is no correlation between Gender of GP leaders and the likelihood of the number of new or repaired drinking water facilities in the villages. \\
 	\vspace{6cm}
 	\item [(b)] Run a bivariate regression to test this hypothesis in \texttt{R} (include your code!).
+	Step 1: load data\\
+	\lstinputlisting[language=R, firstline=103, lastline=103]{PS2.R}
+	Step 2: run a bivariate regression
+	\lstinputlisting[language=R, firstline=112, lastline=117]{PS2.R}	
+	\href{file:///C:/Users/Caesar/Documents/GitHub/StatsI_Fall2022/problemSets/PS02/My_Answers/Reg_Gen_Wat.html}{\includegraphics[height=.99\textheight]{Reg_Gen_Wat.html}}
 	
-	\vspace{6cm}
-	\item [(c)] Interpret the coefficient estimate for reservation policy. 
+	\item [(c)] Interpret the coefficient estimate for reservation policy.\\ 
+	The p-value of the coefficient of female is 0.0197, which is lower than 0.05.
+	Therefore, we can reject the null hypothesis that there is no correlation between the existence of reservation policy and the number of new or repaired drinking water facilities in the villages at the 95 per cent level.\\ 
+	The coefficient of reserved is 9.252, which indicates that when there is a reservation policy in place, we expect to see an average difference by 9.252 higher in the number of new or repaired drinking water facilities in the villages.
 \end{enumerate}
 
 \end{document}
