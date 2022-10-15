@@ -67,31 +67,31 @@ pchisq(3.80, df =2, lower.tail = FALSE)
 # Part c: 
 
 
-Res_Upper_NS <- (14-13.5)/sqrt(13.5)
+Res_Upper_NS <- (14-13.5)/sqrt(13.5*(1-sum(Bribe_num[1, ])/sum(Bribe_num))*(1-sum(Bribe_num[ ,1])/sum(Bribe_num)))
 Res_Upper_NS
 
-Res_Upper_BR <- (6-8.36)/sqrt(8.36)
+Res_Upper_BR <- (6-8.36)/sqrt(8.36*(1-sum(Bribe_num[1, ])/sum(Bribe_num))*(1-sum(Bribe_num[ ,2])/sum(Bribe_num)))
 Res_Upper_BR
 
-Res_Upper_SGW <- (7-5.14)/sqrt(5.14)
+Res_Upper_SGW <- (7-5.14)/sqrt(5.14*(1-sum(Bribe_num[1, ])/sum(Bribe_num))*(1-sum(Bribe_num[ ,3])/sum(Bribe_num)))
 Res_Upper_SGW
 
-Res_Lower_NS <- (7-7.5)/sqrt(7.5)
+Res_Lower_NS <- (7-7.5)/sqrt(7.5*(1-sum(Bribe_num[2, ])/sum(Bribe_num))*(1-sum(Bribe_num[ ,1])/sum(Bribe_num)))
 Res_Lower_NS
 
-Res_Lower_BR <- (7-4.64)/sqrt(4.64)
+Res_Lower_BR <- (7-4.64)/sqrt(4.64*(1-sum(Bribe_num[2, ])/sum(Bribe_num))*(1-sum(Bribe_num[ ,2])/sum(Bribe_num)))
 Res_Lower_BR
 
-Res_Lower_SGW <- (1-2.86)/sqrt(2.86)
+Res_Lower_SGW <- (1-2.86)/sqrt(2.86*(1-sum(Bribe_num[2, ])/sum(Bribe_num))*(1-sum(Bribe_num[ ,3])/sum(Bribe_num)))
 Res_Lower_SGW
 
 
-# standardised residuals for Upper Class Not stopped: 0.1361
-# standardised residuals for Upper Class bribe requested: -0.8162
-# standardised residuals for Upper Class Stopped/Given warning: 0.8204
-# standardised residuals for Lower Class Not Stopped: -0.1826
-# standardised residuals for Lower Class bribe Requested: 1.0956
-# standardised residuals for Lower Class Stopped/Given warning: -1.0998
+# standardised residuals for Upper Class Not stopped: 0.3220
+# standardised residuals for Upper Class bribe requested:  -1.6437
+# standardised residuals for Upper Class Stopped/Given warning: 1.5258
+# standardised residuals for Lower Class Not Stopped: -0.3220
+# standardised residuals for Lower Class bribe Requested: 1.6445
+# standardised residuals for Lower Class Stopped/Given warning: -1.5246
 
 # Part d: 
 
