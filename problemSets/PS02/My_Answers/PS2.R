@@ -111,7 +111,8 @@ WESTB <- read.csv("https://raw.githubusercontent.com/kosukeimai/qss/master/PREDI
 
 Reg_Gen_Wat <- lm(water ~ reserved, data = WESTB)
 summary(Reg_Gen_Wat)
-
+plot(water ~ reserved, data = WESTB)
+abline(Reg_Gen_Wat)
 library(stargazer)
 stargazer(Reg_Gen_Wat, type = "html", out = "Reg_Gen_Wat.html")
 
