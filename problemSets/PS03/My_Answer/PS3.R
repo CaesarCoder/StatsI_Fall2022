@@ -1,6 +1,8 @@
 DAT <- read.csv("C:/Users/Caesar/Documents/GitHub/StatsI_Fall2022/datasets/incumbents_subset.csv")
 
+install.packages("stargazer")
 library(stargazer)
+
 
 ## Q1: 
 LR_VS_DL <- lm(voteshare ~ difflog, data = DAT)
@@ -9,7 +11,7 @@ summary(LR_VS_DL)
 ## p-value 2.2e-16, smaller than 0.001, reject the null 
 
 stargazer(LR_VS_DL, title="Regression Results: Vote Share ~ Difflog",
-          dep.var.labels=c("Vote Share"), ci=TRUE, ci.level=0.95, single.row=TRUE))
+          type = "LaTex")
 
 
 
@@ -69,7 +71,7 @@ plot(RS_LR_VS_DL ~ RS_LR_PV_DL, data = DAT)
 abline(LR_RS_PV_DL_VS_DL)
 
 ## prediction equation:
-# Y = -9.985e-19 + 5.062e-01x
+# Y = (2.569e-01)x - 4.860e-18
 
 ## Q5: 
 LR_VS_DL_PV <- lm(voteshare ~ difflog + presvote, data = DAT)
@@ -80,3 +82,10 @@ summary(LR_VS_DL_PV)
 # Y = 0.449 + 0.036x1 + 0.257x2
 
 
+## residuals of models from Q4 and Q5 are the same, which equals to 0.073.  
+# In the Regression Model of Q4, the residuals from the regression model (Vote
+# Share~difflog), is statistically associated with the residuals from the regression
+# model (presvote ~ difflog), which means RSS of Q4 refers to the unexplained 
+# variations by variables voteshare, difflog and presvote. The residuals of Q5 
+# also refers to the unexplained variations by variables voteshare, difflog and 
+# presvote. So the residuals of Q4 and Q5 have the same value. 
