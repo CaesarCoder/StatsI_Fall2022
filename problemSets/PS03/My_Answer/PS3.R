@@ -65,7 +65,7 @@ summary(LR_VS_PV)
 LR_RS_PV_DL_VS_DL <- lm(RS_LR_VS_DL ~ RS_LR_PV_DL, data = DAT)
 summary(LR_RS_PV_DL_VS_DL)
 
-# p-value for resediual = 2e-16 < 0.001, reject null
+# p-value for residual = 2e-16 < 0.001, reject null
 
 plot(RS_LR_VS_DL ~ RS_LR_PV_DL, data = DAT)
 abline(LR_RS_PV_DL_VS_DL)
