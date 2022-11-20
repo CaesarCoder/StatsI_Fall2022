@@ -8,7 +8,7 @@ library(stargazer)
 LR_VS_DL <- lm(voteshare ~ difflog, data = DAT)
 summary(LR_VS_DL)
 
-## p-value for the coeeficient of difflog is 2.2e-16, smaller than 0.001, we can
+## p-value for the coeeficient of difflog is smaller than 0.001, we can
 # reject the null hypothesis that there is no association between voteshare and 
 # difflog statistically significant at the 99.9% level. 
 
@@ -33,7 +33,7 @@ dev.off()
 LR_PV_DL <- lm(presvote ~ difflog, data = DAT)
 stargazer(LR_PV_DL, title="Regression Results: Presvote ~ Difflog")
 
-## p-value for the coefficient of difflog is 2.2e-16, smaller than 0.001, we can
+## p-value for the coefficient of difflog is smaller than 0.001, we can
 # reject the null hypothesis that there is no association between presvote and 
 # difflog statistically significant at the 99.9% level. 
 
@@ -53,7 +53,7 @@ print(RS_LR_PV_DL)
 LR_VS_PV <- lm(voteshare ~ presvote, data = DAT)
 stargazer(LR_VS_PV, title="Regression Results: voteshare ~ Presvote")
 
-## p-value of coefficient for presvote is 2e-16, smaller than 0.001, we can 
+## p-value of coefficient for presvote is smaller than 0.001, we can 
 # reject the null hypothesis that there is no association statistically
 # significant between voteshare and presvote at the 99.9% level. 
 
@@ -73,8 +73,8 @@ dev.off()
 LR_RS_PV_DL_VS_DL <- lm(RS_LR_VS_DL ~ RS_LR_PV_DL, data = DAT)
 stargazer(LR_RS_PV_DL_VS_DL, title="Regression Results: voteshare ~ Presvote")
 
-# p-value for the coefficient of residuals from regression model of Q2 is 
-# 2e-16 < 0.001, we can reject the null hypothesis that there is no association
+# p-value for the coefficient of residuals from regression model of Q2 is smaller 
+# than 0.001, we can reject the null hypothesis that there is no association
 # statistically significant between residuals from regression model of Q2 and 
 # regression model of Q1 at the 99.9% level.
 
@@ -92,11 +92,11 @@ dev.off()
 LR_VS_DL_PV <- lm(voteshare ~ difflog + presvote, data = DAT)
 stargazer(LR_VS_DL_PV, title = "Regression Results: voteshare ~ difflog + presvote")
 
-# p-value of the coefficient for difflog is 2e-16, smaller than 0.001, we can 
+# p-value of the coefficient for difflog is smaller than 0.001, we can 
 # reject the null hypothesis that there is no association statistically 
 # significant between vote share and difflog at the 99.9% level.
 
-# p-value of the coefficient for presvote is 2e-16, smaller than 0.001, we can 
+# p-value of the coefficient for presvote is smaller than 0.001, we can 
 # reject the null  hypothesis that there is no association statistically 
 # significant between vote share and presvote at the 99.9% level.
 
