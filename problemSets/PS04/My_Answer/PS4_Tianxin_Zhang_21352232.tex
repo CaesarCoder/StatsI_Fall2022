@@ -63,7 +63,7 @@
 
 \title{Problem Set 4}
 \date{Due: December 4, 2022}
-\author{Applied Stats/Quant Methods 1}
+\author{Tianxin Zhang/21352232/Applied Stats/Quant Methods 1}
 
 
 \begin{document}
@@ -98,24 +98,68 @@ help(Prestige)
 	
 	\item [(a)]
 	Create a new variable \texttt{professional} by recoding the variable \texttt{type} so that professionals are coded as $1$, and blue and white collar workers are coded as $0$ (Hint: \texttt{ifelse}).
-	
+		\lstinputlisting[language=R, firstline=1, lastline=11]{PS4.R}
 	\vspace{6cm}
 	
 	
 	\item [(b)]
 	Run a linear model with \texttt{prestige} as an outcome and \texttt{income}, \texttt{professional}, and the interaction of the two as predictors (Note: this is a continuous $\times$ dummy interaction.)
+		\lstinputlisting[language=R, firstline=14, lastline=19]{PS4.R}
+	
+% Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com
+% Date and time: Sat, Dec 03, 2022 - 00:01:28
+\begin{table}[!htbp] \centering 
+	\caption{Regression Results with interaction: prestige ~ income + professionaldummy} 
+	\label{} 
+	\begin{tabular}{@{\extracolsep{5pt}}lc} 
+		\\[-1.8ex]\hline 
+		\hline \\[-1.8ex] 
+		& \multicolumn{1}{c}{\textit{Dependent variable:}} \\ 
+		\cline{2-2} 
+		\\[-1.8ex] & prestige \\ 
+		\hline \\[-1.8ex] 
+		income & 0.003$^{***}$ \\ 
+		& (0.0005) \\ 
+		& \\ 
+		professional\_dummy & 37.781$^{***}$ \\ 
+		& (4.248) \\ 
+		& \\ 
+		income:professional\_dummy & $-$0.002$^{***}$ \\ 
+		& (0.001) \\ 
+		& \\ 
+		Constant & 21.142$^{***}$ \\ 
+		& (2.804) \\ 
+		& \\ 
+		\hline \\[-1.8ex] 
+		Observations & 98 \\ 
+		R$^{2}$ & 0.787 \\ 
+		Adjusted R$^{2}$ & 0.780 \\ 
+		Residual Std. Error & 8.012 (df = 94) \\ 
+		F Statistic & 115.878$^{***}$ (df = 3; 94) \\ 
+		\hline 
+		\hline \\[-1.8ex] 
+		\textit{Note:}  & \multicolumn{1}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+	\end{tabular} 
+\end{table} 
+
+	p-value of the coefficient for income is smaller than 0.01, we can reject the null hypothesis that there is no association statistically significant between prestige and income at the 99 percent level.\\
+	p-value of the coefficient for professionaldummy is smaller than 0.01, we can reject the null hypothesis that there is no association statistically significant between prestige and professionaldummy at the 99 percent level.\\
+	p-value of the coefficient for interaction of income and professionaldummy is smaller than 0.01, we can reject the null hypothesis that there is no association statistically significant between prestige and interaction of income and professionaldummy at the 99 percent level.
 	
 	\vspace{6cm}
 	\item [(c)]
-	Write the prediction equation based on the result.
+	Write the prediction equation based on the result.\\
+	 $  \hat{y} = 21.142 +  0.003x_{1} + 37.781x_{2} -0.002x_{1}x_{2}  $		
 	
 \newpage
 	\item [(d)]
-	Interpret the coefficient for \texttt{income}.
+	Interpret the coefficient for \texttt{income}.\\
+	When holding the effect of professionaldummy and interaction of income and professionaldummy constant, with an increase in income by 1 dollar, we expect to see an increase in prestige by 0.003.  
 	
 	\vspace{10cm}	
 	\item [(e)]
-	Interpret the coefficient for \texttt{professional}.
+	Interpret the coefficient for \texttt{professional}.\\
+	When holding the effect of income and interaction of income and professionaldummy constant, with a difference in profession, we expect to see an average difference of prestige by 37.781.  
 	
 	\newpage
 	\item [(f)]
