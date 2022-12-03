@@ -25,6 +25,31 @@ stargazer(interact_reg_pres_inc_pro, title="Regression Results with interaction:
 # c) prediction equation: 
 
 
-# d) intepretation: 
+# d) interpretation: 
+
+
+# e) 
+
+
+# f) 
+
+y1 = 0.003 * 1000 - 0.002*1000*1
+# y1 = 1
+
+
+# g)
+
+y2 = 37.761 * 1 - 0.002 * 6000 *1 
+# y2 = 25.761
+
+
+
+# Q2
+# a)
+
+
+# Hypothesis: Ho: 
+test_statsitcs <- (0.042-0) /0.016
+# test_statsitcs = 2.625
 
 

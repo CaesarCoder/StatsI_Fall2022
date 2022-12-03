@@ -154,22 +154,29 @@ help(Prestige)
 \newpage
 	\item [(d)]
 	Interpret the coefficient for \texttt{income}.\\
-	When holding the effect of professionaldummy and interaction of income and professionaldummy constant, with an increase in income by 1 dollar, we expect to see an increase in prestige by 0.003.  
+	When holding the effects of other variables in the model constant, with an increase in income by 1 dollar, we expect to see an increase in prestige by 0.003.  
 	
 	\vspace{10cm}	
 	\item [(e)]
 	Interpret the coefficient for \texttt{professional}.\\
-	When holding the effect of income and interaction of income and professionaldummy constant, with a difference in profession, we expect to see an average difference of prestige by 37.781.  
+	When holding the effect of other variables in the model constant, with a difference in profession, we expect to see an average difference of prestige by 37.781.  
 	
 	\newpage
 	\item [(f)]
-	What is the effect of a \$1,000 increase in income on prestige score for professional occupations? In other words, we are interested in the marginal effect of income when the variable \texttt{professional} takes the value of $1$. Calculate the change in $\hat{y}$ associated with a \$1,000 increase in income based on your answer for (c).
-	
+	What is the effect of a \$1,000 increase in income on prestige score for professional occupations? In other words, we are interested in the marginal effect of income when the variable \texttt{professional} takes the value of $1$. Calculate the change in $\hat{y}$ associated with a \$1,000 increase in income based on your answer for (c).\\
+	$ 0.003 * 1000 - 0.002*1000*1 = 3 $
+	\lstinputlisting[language=R, firstline=34, lastline=37]{PS4.R}
+	$\hat{y} = 1 $
+	The effect is an increase in prestige by 1
 	\vspace{10cm}
 	
 	
 	\item [(g)]
-	What is the effect of changing one's occupations from non-professional to professional when her income is \$6,000? We are interested in the marginal effect of professional jobs when the variable \texttt{income} takes the value of $6,000$. Calculate the change in $\hat{y}$ based on your answer for (c).
+	What is the effect of changing one's occupations from non-professional to professional when her income is \$6,000? We are interested in the marginal effect of professional jobs when the variable \texttt{income} takes the value of $6,000$. Calculate the change in $\hat{y}$ based on your answer for (c).\\
+		$\hat{y} = 37.761 * 1 - 0.002 * 6000 *1 $
+	\lstinputlisting[language=R, firstline=40, lastline=43]{PS4.R}
+	$\hat{y} =  25.761 $
+	The effect is an increase in prestige by 25.761
 	
 	
 \end{enumerate}
@@ -204,7 +211,13 @@ a precinct that was adjacent to a precinct in the treatment group (since people 
 
 \vspace{.5cm}
 \begin{enumerate}
-	\item [(a)] Use the results from a linear regression to determine whether having these yard signs in a precinct affects vote share (e.g., conduct a hypothesis test with $\alpha = .05$).
+	\item [(a)] Use the results from a linear regression to determine whether having these yard signs in a precinct affects vote share (e.g., conduct a hypothesis test with $\alpha = .05$).\\
+	Step I: $ H_{0}: B_{1} = 0 vs.  $\\		
+	standard error: 0.016
+	Test-Statistics: $ t = (0.042-0) /0.016 = 2.625$
+	degree of freedom: n - 3 = 131-3 = 128
+	 p-value= 2 × Pr(t128 > | − 2.625|) 
+	
 	
 	\newpage		
 	\item [(b)]  Use the results to determine whether being
