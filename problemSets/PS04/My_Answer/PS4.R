@@ -49,7 +49,22 @@ y2 = 37.761 * 1 - 0.002 * 6000 *1
 
 
 # Hypothesis: Ho: 
-test_statsitcs <- (0.042-0) /0.016
-# test_statsitcs = 2.625
+sd1 = 0.016
+ts1 <- (0.042-0) /0.016
+ts1
+# test_statistics = 2.625
+p_value1 <- 2*pt(abs(ts1), 128, lower.tail = FALSE)
+p_value1
+# p_value1 =  0.00972002
 
 
+
+
+# b)
+sd2 = 0.013
+ts2 = (0.042-0) /0.013
+ts2
+# test_statistics = 3.231
+p_value2 <- 2*pt(abs(ts2), 128, lower.tail = FALSE)
+p_value2
+# p_value2 =  0.00156946
