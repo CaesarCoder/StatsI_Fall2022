@@ -158,7 +158,7 @@ help(Prestige)
 	\vspace{10cm}	
 	\item [(e)]
 	Interpret the coefficient for \texttt{professional}.\\
-	When holding the effect of other variables in the model constant, with a difference in profession, we expect to see an average difference of prestige by 37.781.  
+	When holding the effect of other variables in the model constant, with a difference in professional, we expect to see an average difference of prestige by 37.781.  
 	
 	\newpage
 	\item [(f)]
@@ -172,10 +172,10 @@ help(Prestige)
 	
 	\item [(g)]
 	What is the effect of changing one's occupations from non-professional to professional when her income is \$6,000? We are interested in the marginal effect of professional jobs when the variable \texttt{income} takes the value of $6,000$. Calculate the change in $\hat{y}$ based on your answer for (c).\\
-		$\hat{y} = 37.761 * 1 - 0.002 * 6000 *1 $
+		$\hat{y} = 37.781 * 1 - 0.002 * 6000 *1 $
 	\lstinputlisting[language=R, firstline=40, lastline=43]{PS4.R}
-	$\hat{y} =  25.761 $
-	The effect is an increase in prestige by 25.761
+	$\hat{y} =  25.781 $
+	The effect is an increase in prestige by 25.781
 	
 	
 \end{enumerate}
@@ -218,7 +218,7 @@ a precinct that was adjacent to a precinct in the treatment group (since people 
 	P-value:\\
 	 \lstinputlisting[language=R, firstline=56, lastline=58]{PS4.R} 
 	 $p-value = 0.0097 < 0.05$\\
-	 Conclusion: we can deny the null hypothesis that the slope of having these yard signs in a precinct is 0. 
+	 Conclusion: we can reject the null hypothesis that the slope of having these yard signs in a precinct is 0. 
 	
 	
 	\newpage		
@@ -232,7 +232,7 @@ a precinct that was adjacent to a precinct in the treatment group (since people 
 	P-value:\\
 	\lstinputlisting[language=R, firstline=68, lastline=70]{PS4.R} 
 	$p-value = 0.0016 < 0.05$\\
-	Conclusion: we can deny the null hypothesis that the slope of being next to precincts with yard signs is 0. 
+	Conclusion: we can reject the null hypothesis that the slope of being next to precincts with yard signs is 0. 
 	
 	
 	\vspace{7cm}
