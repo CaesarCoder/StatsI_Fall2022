@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.14)  4 DEC 2022 13:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.14)  4 DEC 2022 18:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -959,42 +959,42 @@ consecutive:
 consecutive:
 ) (PS4.R
 consecutive:
-) [6]
-Underfull \hbox (badness 10000) in paragraph at lines 187--188
+) [6] [7]
+Underfull \hbox (badness 10000) in paragraph at lines 188--189
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 189--191
+Underfull \hbox (badness 10000) in paragraph at lines 190--192
 
  []
 
 (PS4.R
 consecutive:
 )
-Underfull \hbox (badness 10000) in paragraph at lines 218--219
+Underfull \hbox (badness 10000) in paragraph at lines 219--220
 
  []
 
 (PS4.R
 consecutive:
-[7]) [8] (PS4.R
+[8]) [9] (PS4.R
 consecutive:
 )
-Underfull \hbox (badness 10000) in paragraph at lines 232--233
+Underfull \hbox (badness 10000) in paragraph at lines 233--234
 
  []
 
 (PS4.R
 consecutive:
-) [9] [10] (PS4_Tianxin_Zhang_21352232.aux)
+) [10] [11] (PS4_Tianxin_Zhang_21352232.aux)
 Package rerunfilecheck Info: File `PS4_Tianxin_Zhang_21352232.out' has not chan
 ged.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 27102 strings out of 475389
- 482409 string characters out of 2776528
+ 27103 strings out of 475389
+ 482416 string characters out of 2776528
  1080815 words of memory out of 3000000
  47909 multiletter control sequences out of 15000+600000
  481343 words of font info for 78 fonts, out of 8000000 for 9000
@@ -1019,9 +1019,9 @@ KTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Caesar/AppData/Local/Pr
 ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Caesar/AppDat
 a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Cae
 sar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on PS4_Tianxin_Zhang_21352232.pdf (10 pages, 207232 bytes).
+Output written on PS4_Tianxin_Zhang_21352232.pdf (11 pages, 208238 bytes).
 PDF statistics:
- 202 PDF objects out of 1000 (max. 8388607)
- 60 named destinations out of 1000 (max. 500000)
+ 207 PDF objects out of 1000 (max. 8388607)
+ 61 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
