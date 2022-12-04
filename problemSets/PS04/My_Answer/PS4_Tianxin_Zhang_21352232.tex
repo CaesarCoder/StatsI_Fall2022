@@ -98,13 +98,13 @@ help(Prestige)
 	
 	\item [(a)]
 	Create a new variable \texttt{professional} by recoding the variable \texttt{type} so that professionals are coded as $1$, and blue and white collar workers are coded as $0$ (Hint: \texttt{ifelse}).
-		\lstinputlisting[language=R, firstline=1, lastline=11]{PS4.R}
+		\lstinputlisting[language=R, firstline=9, lastline=11]{PS4.R}
 	\vspace{6cm}
 	
 	
 	\item [(b)]
 	Run a linear model with \texttt{prestige} as an outcome and \texttt{income}, \texttt{professional}, and the interaction of the two as predictors (Note: this is a continuous $\times$ dummy interaction.)
-		\lstinputlisting[language=R, firstline=14, lastline=19]{PS4.R}
+		\lstinputlisting[language=R, firstline=14, lastline=17]{PS4.R}
 	
 % Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com
 % Date and time: Sat, Dec 03, 2022 - 00:01:28
@@ -154,12 +154,12 @@ help(Prestige)
 \newpage
 	\item [(d)]
 	Interpret the coefficient for \texttt{income}.\\
-	When holding the effects of other variables in the model constant, with an increase in income by 1 dollar, we expect to see an increase in prestige by 0.003.  
+	There is a positive and statistically reliable relationship between income and prestige score. When holding the effects of other variables in the model constant, with an increase in income by 1 dollar, we expect to see an increase in prestige score by 0.003.  
 	
 	\vspace{10cm}	
 	\item [(e)]
 	Interpret the coefficient for \texttt{professional}.\\
-	When holding the effect of other variables in the model constant, with a difference in professional, we expect to see an average difference of prestige by 37.781.  
+	There is a positive and statistically reliable relationship between professional\underline{ }dummy and prestige score. When holding the effect of other variables in the model constant, we expect to see a higher prestige score of professional workers than white and blue collar workers by 37.781 on average.  
 	
 	\newpage
 	\item [(f)]
